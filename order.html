@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/reset.css"> -->
+	<title>日初早餐</title>
+</head>
+<body>
+    <div class="wrapper">
+
+    	   <!-- part1 -->
+         <header>
+          <span><a href="index.html">繁體中文</a></span>
+          <span>|</span>
+          <span><a href="#">日本語</a></span>
+          <span class="shop_car"><a href="./inquire.html"><img src="./img/index/shop_car_opt.png" alt=""></a></span>
+         <div class="logo"><a href="index.html"><img src="img/logo.png" alt=""></a> </div>
+        </header>
+            
+          <!-- part2 -->
+          <nav>
+
+            <input type="checkbox" id="switch">
+            <label for="switch"><div class="burger"></div></label>
+            
+            <ul class="menu">
+             <li><a href="./information.html">最新情報</a></li>
+             <li><a href="./food.html">餐點訂餐</a></li>
+             <li><a href="./store.html">門市資訊</a></li>
+             <li><a href="./contact.html">聯絡我們</a></li>
+           </ul>
+           
+           <ul class="menu2">
+            <li><a href="./information.html">最新情報</a></li>
+            <li><a href="./food.html">餐點訂餐</a></li>
+            <li><a href="./store.html">門市資訊</a></li>
+            <li><a href="./contact.html">聯絡我們</a></li>
+           </ul>
+           
+           <img src="img/index/carsouel_2.jpg" alt="">
+          </nav>
+          <!-- part3 -->
+          <div class="main-content">
+            <aside class="food_item">
+            <ul>
+            <li class = "food_item_1">美味餐點</a></li>
+                <li><a href="./food.html">漢堡</a></li>
+                <li><a href="#">蛋餅</a></li>
+                <li><a href="#">三明治</a></li>
+                <li><a href="#">中式早餐</a></li>
+                <li><a href="#">現烤土司</a></li>
+                <li><a href="#">鐵板麵套餐</a></li>
+                <li><a href="#">點心</a></li>
+                <li><a href="#">飲料</a></li>
+                <li class = "food_item_2">產品以現場供應為主</li>
+            </ul>
+            <a href="#"><img src="img/index/mayuyu1.png" alt=""></a>
+            </aside>
+
+            <article class="food_order">
+
+                <div class="order_left">
+                  <img src="./img/food/hambuger_1.jpg" alt="">
+                </div>
+
+                <div class="order_right">
+                 <h2>唐揚雞刈包</h2>
+                 <p>$79</p>
+                 <div class= "button_click">
+                 <button onclick="btnOperate('-')">-</button>
+                 <input class="num" value="1" id="num">
+                 <button onclick="btnOperate('+')">+</button>
+                 <a class="shopcar" href="#">加入餐車</a>
+                 <a class="return" href="./food.html">回上一頁</a>
+                </div>
+
+               
+            </article>
+
+            <div class="calories">
+              <ul>
+                <li class="cal1"><p>單份唐揚雞刈包營養標示</p></li>
+                <li><p>熱量379 Kcal</p></li>
+                <li><p>蛋白質15 g</p></li>
+                <li><p>脂肪18.4 g</p></li>
+                <li><p>飽和脂肪7.2 g</p></li>
+                <li><p>反式脂肪0 g</p></li>
+                <li><p>碳水化合物37.8 g</p></li>
+                <li><p>鈉541 mg</p></li>
+              </ul>
+            </div>   
+          </div>
+
+          <!-- part4 -->
+         <footer>
+           <ul class = "footer_inner">
+            <li><a href="#">品牌故事</a></li>
+            <li><a href="#">元氣情報</a></li>
+            <li><a href="#">美味餐點</a></li>
+            <li><a href="#">聯絡我們</a></li>
+          </ul>
+         
+          <ul class="sprites">
+            <li class="FB"><a href="#"></a></li>
+            <li class="IG"><a href="#"></a></li>
+            <li class="TWITTER"><a href="#"></a></li>
+         </ul>
+        </footer>
+    
+    </div>
+    
+    <script>
+      function btnAdd(){
+          //1、獲取#num的value
+          var value = document.getElementById("num").value;
+          //2、將取出來的值做+1操作，再賦值給#num的value
+          value = Number(value) + 1;
+          document.getElementById("num").value = value;
+      }
+
+      function btnReduce(){
+          //1、獲取#num的值
+          var value = Number(document.getElementById("num").value);
+          //2、判斷#num的值是否小於等於1，如果小於等於1的話，則將值改為1
+          //3、否則，可以實現 - 1 操作
+          if(value <= 1){
+              value = 1;
+          }else{
+              value -= 1;
+          }
+          //4、將 value 的值賦值給 #num
+          document.getElementById("num").value = value;
+      }
+      
+      /**
+       * 做 數值的更改操作
+       * 引數 op ：表示 符號 
+       */
+      function btnOperate(op){
+          var value = Number(document.getElementById("num").value);
+          if(op == '+'){
+              value += 1;
+          }else if(op == '-'){
+              if(value <= 1){
+                  value = 1;
+              }else{
+                  value -= 1;
+              }
+          }
+          document.getElementById("num").value=value;
+      }
+  </script>
+  </body>
+</html>

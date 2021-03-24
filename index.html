@@ -58,7 +58,7 @@
             <div class="swiper-wrapper">
 
               <div class="swiper-slide">
-                <a href="#"><img src="img/index/hambuger001.jpg" alt="">
+                <a href="./order.html"><img src="img/index/hambuger001.jpg" alt="">
                 <p>唐揚雞刈包</p>
                 </a>
             </div>
@@ -159,8 +159,26 @@
 
 	 </div>
 
-     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+    <button type="button" id="BackTop" class="toTop-arrow"></button>
+<script>
+$(function(){
+	$('#BackTop').click(function(){ 
+		$('html,body').animate({scrollTop:0}, 333);
+	});
+	$(window).scroll(function() {
+		if ( $(this).scrollTop() > 300 ){
+			$('#BackTop').fadeIn(222);
+		} else {
+			$('#BackTop').stop().fadeOut(222);
+		}
+	}).scroll();
+});
+</script>
+
+     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+     
   <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper('.swiper-container', {

@@ -1,7 +1,7 @@
 @import url('reset.css');
 
 *{
-   outline: 1px solid red;
+   /* outline: 1px solid red; */
 }
 
 body{
@@ -24,16 +24,6 @@ header{
 }
 
 
-header span a{
-    color:#303442;
-    text-decoration: none;
-    font-size: 1.1em;
-}
-
-header span a:hover{
-    color: orange;
-}
-
 .logo {
 	clear: both;
 	max-width: 100%;
@@ -54,12 +44,12 @@ nav{
   overflow: hidden;
 }
 
-label{
+#L1{
   border:  solid #fff;
 }
 
 @media screen and (min-width: 577px){
-  label  {
+  #L1  {
     display: none;
   }
  } 
@@ -69,19 +59,6 @@ label{
 }
 
 .burger{
-  /* display: block; 
-  color: #fff;
-	font-size: 2em;
-	line-height: 50px;
-	text-align: center;
-	font-weight: bold;
-	border: 1px solid #e5e5e5;
-	box-sizing: border-box;
-	background-image: linear-gradient(0deg, #82ffb8 0%, #c5e3e8 100%);
-	position: relative;  */
-  /* width: 0px; */
-  /* height: 0px; */
-  /* border-bottom: 10px solid red;  */
   cursor: pointer;
   border-top: 10px solid red; 
   border-left: 10px solid transparent;
@@ -150,73 +127,41 @@ nav li a{
   }
  } 
 
-nav li a:hover{
-	z-index: 1;
-	border-color: white;
-	transform: scale(1.2);
-	box-shadow:  2px 2px 2px 2px rgba(0,0,0,.1);
-}
-
-
-nav img{
-	display: block;
-  max-width: 100%;
-  height: auto;
-  padding-top: 10px; 
-}
-
 
 /*----------------------------------------------------------part3 Index----------------------------------------------------------------*/
 mark{
+  
+}
 
+mark img{
+   display: block;
+   max-width: 100%;
+   height: auto;
+   padding-top: 10px;
 }
 
 
-mark ul{
-    display: flex;
-    justify-content: center;
-    padding: 20px 30px;
+mark a{
+   text-decoration: none;
+   font-size: 1.2em;
+   color: #000;
+   font-weight: bold;
 }
 
-mark li{
-    outline: 1px solid #ccc;
-    flex-basis: 240px;
-    margin: 0 5px;
-    transition: opacity 1s ease;
-}
-
-mark li:hover{
-  opacity: 0.6;
-}
-
-mark li img{
-    display: flex;
-    max-width: 100%;
-    max-height: 100%;
-    transition: all 1s;
-}
-
-mark li a{
-    text-decoration: none;
-    color: #000; 
+mark p{
+   margin: 10px auto;
 }
 
 
-mark li p{
-	  font-size: 1em;
-    line-height: 1.6;
-    padding: 10px;
-    box-sizing: border-box;
+.outside{
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
 }
-
-mark img:hover{
-	  /* transform: scale3d(1.5, 1.5, 2); */
-}
-
 
 .parallax {
   /* 設定背景圖片/居中/不重覆 */
-  background-image: url("../img/index/about.png");
+  background-image: url("../img/index/about1.png");
   background-repeat: no-repeat;
   background-position: center ;
   /* 設定區塊高度 */
@@ -232,7 +177,9 @@ mark img:hover{
   }
  } 
 
-
+.test{
+   display: flex;
+}
 
 .block1{
   margin-top: 10px;
@@ -243,12 +190,14 @@ mark img:hover{
   padding: 20px 0 20px 30px;
   font-size: 2em;
   color: orange;
+  text-align: center;
 }
 
 .block1 p{
   padding-left: 30px;
   font-size: 1.4em;
   line-height: 2;
+  text-align: center;
 }
 
 .block1 a{
@@ -256,19 +205,23 @@ mark img:hover{
   color: #fff;
   text-decoration: none;
   display: block;
-  width: 150px;
+  width: 100px;
   height: 40px;
   text-align: center;
   line-height: 40px;
   font-size: 1.4em;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .tea{
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
 }
 
 .tea img{
   max-width: 100%;
+  max-height: 100%;
 }
 
 @media screen and (max-width:576px){
@@ -279,10 +232,18 @@ mark img:hover{
 
  @media screen and (max-width:576px){
   .block1 p {
-    /* margin-left: 65px; */
+    text-align: center;
   }
  } 
 
+ @media screen and (max-width:576px){
+  .tea img{
+    justify-content: center;
+    align-items: center;
+  }
+ } 
+
+ 
  .block2{
    background-color: #d7d7d7;
  }
@@ -362,22 +323,24 @@ mark img:hover{
   flex-grow: 2;
 }
 
-@media screen and (max-width: 576px){
 
-	.item1 {
-	 display: none;
-	}
+@media  (max-width: 767px){
 
-  .item2{
-    display: none;
+    .block3{
+      width: 100%;
+    }   
+
+	  .block3 ul{
+	    /* display: block; */
+      
+  	}
+
+    .block3 img{
+      width: 100%;
+      display: block;
+      margin: 0 auto;
   }
-
-  .item3{
-    display: none;
-  }
-
 }
-
 
 .block3 li:hover{
   filter:grayscale(0);
@@ -390,7 +353,7 @@ mark img:hover{
 }
 
 .map iframe{
-  width: 100%;
+  max-width: 100%;
 
 }
 
@@ -550,10 +513,8 @@ mark img:hover{
 
 /*-------------------------------------------------------part3 Order-------------------------------------------------------*/
 
-
 .food_order{
    display: flex;
-   flex-wrap: wrap;
 }
 
 .order_left{
@@ -566,7 +527,7 @@ mark img:hover{
 
 .order_right{
    max-width: 100%;
-   padding: 90px 140px;
+   padding: 90px 120px;
 }
 
 .order_right h2{
@@ -589,8 +550,9 @@ mark img:hover{
   height:40px;
   font-size:24px;
   vertical-align:bottom;
-  background-color: #e5e5e5
+  background-color: #e5e5e5;
 }
+
 .num{
   box-sizing:border-box;
   width: 60px;
@@ -611,7 +573,7 @@ mark img:hover{
   margin-top: 30px;
 }
 
-.return{
+.pay{
   text-decoration: none;
   font-size: 1.6em;
   border: 1px solid #e5e5e5;
@@ -628,16 +590,17 @@ mark img:hover{
 }
 
 .calories ul{
- 
+  justify-content: center;
+  align-items: center;
 }
 
 .calories li{
    border: 1px solid #ccc;
-   width: 500px;
-   height: 40px;
+   height: 40px;  
    line-height: 40px;
-   align-items:flex-end;
+   width: 500px;
 }
+
 
 .cal1{
    background-color: #A4E1E6;
@@ -648,8 +611,10 @@ mark img:hover{
 .calories li p{
    font-size: 1.2em;
    color: #000;
-   /* margin-left: 100px; */
 }
+
+
+
 
 /*-------------------------------------------------------part3 Information-------------------------------------------------------*/
 
@@ -690,7 +655,6 @@ mark img:hover{
   border: 1px solid #aa9b77;
   padding: 20px;
   margin-bottom: 10px;
-  font-style: italic;
   border-radius: 10px;
  
 }
@@ -753,48 +717,81 @@ mark img:hover{
   max-height: 100%;
 }
 
-form{
-  padding-top: 30px;
+.contact h1{
+  padding-top: 20px;
+  margin-left: 10px;
+  text-align: center;
+  font-size: 1.4em;
+}
+
+
+.contact2 {
+  text-align: center;
   background-color: #f8efef;
 }
 
-
-.contact h1{
+.contact2 h1{
   margin-left: 10px;
   text-align: center;
 }
-  
+ 
+form{
+  padding-top: 30px; 
+}
+
 .p1{
   display: flex;
   justify-content: center;
-  margin-top: 20px;
-  padding-left: 72px;
+  margin-top:10px;
+  font-size: 1.2em;
 }
 
-.name{
-  
-}
 
 .p2{
   display: flex;
   justify-content: center;
+  margin-top:10px;
+  margin-right: 65px;
+  font-size: 1.2em;
 }
 
 
 .p3{
   display: flex;
   justify-content: center;
+  margin-top:10px;
+  font-size: 1.2em;
 }
 
 .p4{
   display: flex;
   justify-content: center;
+  margin-top:10px;
+  font-size: 1.2em;
 }
 
 .p5{
   display: flex;
   justify-content: center;
+  margin-top:10px;
+  font-size: 1.2em;
 }
+
+.p6{
+  display: flex;
+  justify-content: center;
+  margin-top:10px;
+  font-size: 1.2em;
+}
+
+
+textarea{
+  margin-right: 50px;
+  height: 100px;
+  width: 170px;
+}
+  
+
 
 
 /* --------------------------------------------------------------------------------------------------------- */
@@ -1038,7 +1035,7 @@ input:checked ~ .as5 {
 }
 
 .Cart h1{
-  font-size: 1.5em;
+  font-size: 2em;
   text-align: center;
   margin-bottom: 20px;
   color: #e13a3a;
@@ -1049,6 +1046,7 @@ input:checked ~ .as5 {
   grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
   grid-gap: 2px;
   margin-bottom: 2px;
+  font-size: 1.2em;
 }
 
 .Cart__headerGrid {
@@ -1069,14 +1067,14 @@ input:checked ~ .as5 {
 }
 
 .Cart__productImg {
-  background-image: url(../img/inquire/hambuger001.jpg);
+  background-image: url(../img/inquire/hambuger_1.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .Cart__productImg1 {
-  background-image: url(../img/inquire/hambuger_2.jpg);
+  background-image: url(../img/inquire/drink001.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1089,10 +1087,32 @@ input:checked ~ .as5 {
   background-repeat: no-repeat;
 }
 
-.Cart__productTitle {
-  /* padding-right: 40px; */
-  /* overflow: hidden;
-  line-height: 25px; */
+.Cart__productImg3 {
+  background-image: url(../img/inquire/drink002.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.Cart__productImg4 {
+  background-image: url(../img/inquire/hambuger_3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.Cart__productImg5 {
+  background-image: url(../img/inquire/drink003.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.Cart__productImg6 {
+  background-image: url(../img/inquire/sandwich.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .Cart__productTitle, 
@@ -1102,6 +1122,7 @@ input:checked ~ .as5 {
 .Cart__productDel {
   text-align: center;
   line-height: 60px;
+  font-size: 1.2em;
 }
 
 .Cart__productDel {
@@ -1195,6 +1216,21 @@ input:checked ~ .as5 {
 }
 
 
+.inquire a{
+  margin-top: 10px;
+  background-color: red;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 1.4em;
+  text-align: center;
+  margin: 0 auto;
+}
+
 /*----------------------------------------------------------part3 store--------------------------------------------------------------*/
 
 .store{
@@ -1203,14 +1239,14 @@ input:checked ~ .as5 {
 
 .store h1{
   color: red;
-	font-size: 3em;
+	font-size: 2em;
 	font-weight: bold;
   text-align: center;
-  margin: 20px;
+  margin: 40px;
 }
 
 .store h3{
-	font-size: .8em;
+	font-size: 1.2em;
 	color: gray;
 	margin-bottom: 50px;
   text-align: center;
@@ -1235,8 +1271,8 @@ input:checked ~ .as5 {
 }
 
 .store_1 div{
-	background-image: url(../img/store/store_1.jpg);
-	background-position: right;
+	background-image: url(../img/store/store_2.jpg);
+  background-position: center;
 }
 
 .store_2 div{
@@ -1245,7 +1281,8 @@ input:checked ~ .as5 {
 }
 
 .store_3 div{
-	background-image: url(../img/store/store_1.jpg);
+	background-image: url(../img/store/store_3.jpg);
+  background-position: center;
 }
 
 .store h2{
@@ -1318,8 +1355,6 @@ color: gray;
 
 .sprites{
 margin-top: 20px;
-
-
 }
 
 .sprites li{
@@ -1340,5 +1375,71 @@ margin-top: 20px;
 
 
 
+/* ------------------------------------------------------------------------------------------------------------- */
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-container {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
 
 
+.swiper-container2 {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.swiper-slide2 {
+  text-align: center;
+  font-size: 1em;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}

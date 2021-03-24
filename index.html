@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 	<title>日初早餐</title>
 </head>
 <body>
@@ -11,11 +12,8 @@
 
 	 <!-- part1 -->
 	 <header>
-        <span><a href="index.html">繁體中文</a></span>
-        <span>|</span>
-        <span><a href="#">日本語</a></span>
         <span class="shop_car"><a href="./inquire.html"><img src="./img/index/shop_car_opt.png" alt=""></a></span>
-       <div class="logo"><a href="index.html"><img src="img/logo.png" alt=""></a></div>
+       <div class="logo"><a href="index.html"><img src="./img/logo_90.png" alt=""></a></div>
        
       </header>
 
@@ -23,7 +21,7 @@
      <nav>    
 
            <input type="checkbox" id="switch">
-           <label for="switch"><div class="burger"></div></label>
+           <label id="L1" for="switch"><div class="burger"></div></label>
            
            <ul class="menu">
 		       <li><a href="./information.html">最新情報</a></li>
@@ -39,41 +37,65 @@
                <li><a href="./contact.html">聯絡我們</a></li>
            </ul>
            
-	        <img src="img/index/carsouel_ex.jpg" alt="">
+              
        </nav>
 
       <!-- part3 -->
 
      <mark>
 
-        <ul>
-            <li>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="./img/index/carsouel_1.jpg" alt=""></div>
+              <div class="swiper-slide"><img src="./img/index/carsouel_2.jpg" alt=""></div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+
+     <div class="outside">
+        <div class="swiper-container2">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
                 <a href="#"><img src="img/index/hambuger001.jpg" alt="">
-                <p>特選貝殼造型刈包，夾入以國產雞肉為原料，口感軟嫩多汁。</p>
+                <p>唐揚雞刈包</p>
                 </a>
-            </li>
-            <li>
+            </div>
+            <div class="swiper-slide">
                 <a href="#"><img src="img/index/hambuger002.jpg" alt="">
-                <p>金黃酥脆的豬排帕隄，搭配著濃郁含鈣質高切達吉士片，夾上清脆爽口高麗菜絲，淋上摩斯特製味咖哩醬，香味濃郁。</p>
+                <p>咖哩豬排堡</p>
                 </a>
-            </li>
-            <li >
+            </div>
+            <div class="swiper-slide">
                 <a href="#"><img src="img/index/hambuger003.jpg" alt="">
-                <p>嚴選紐西蘭草飼牛肉，搭配元氣煎蛋，佐以鮮甜萵苣，並淋上特調日式大根和風醬，豐富又營養。</p>
+                <p>牛肉蛋堡</p>
                 </a>
-            </li>
-            <li >
-                <a href="#"><img src="img/index/hambuger004.jpg" alt="">
-                <p>香Q美味的米飯，搭配鮮蝦、干貝、墨魚等豐富的美味海鮮。</p>
+            </div>
+            <div class="swiper-slide">
+                <a href="#"><img src="img/index/drink001.jpg" alt="">
+                <p>錫蘭紅茶</p>
                 </a>
-            </li>
-            <li >
-                <a href="#"><img src="img/index/hambuger004.jpg" alt="">
-                <p>香Q美味的米飯，搭配鮮蝦、干貝、墨魚等豐富的美味海鮮。</p>
+            </div>
+            <div class="swiper-slide">
+                <a href="#"><img src="img/index/drink002.jpg" alt="">
+                <p>茶花綠茶</p>
                 </a>
-            </li>
-        </ul>
-           
+            </div>
+            <div class="swiper-slide">
+                <a href="#"><img src="img/index/drink003.jpg" alt="">
+                <p>柳橙汁</p>
+                </a>
+            </div>
+              
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination2"></div>
+            <!-- Add Arrows -->
+            <!-- <div class="swiper-button-next"></div> -->
+            <!-- <div class="swiper-button-prev"></div> -->
+          </div>
+        </div>  
     </mark>
      
        <div class="parallax"></div>
@@ -81,11 +103,7 @@
        <div class="block1">
         
            <h1>早晨就來杯珍珠奶茶吧</h1>
-           <p>珍珠奶茶在台灣最受歡迎的飲料之一，<br>
-              濃郁的奶茶搭配Q彈的珍珠，喝起來十<br>
-              分爽口，日初早餐在早晨即刻供應，讓<br>
-              您早上也能喝的到。
-            </p>
+           <p>珍珠奶茶在台灣最受歡迎的飲料之一，濃郁的奶茶搭配Q彈有嚼勁的珍珠，喝起來十分過癮，日初早餐在早晨即刻供應，讓您早上也能喝的到。</p>
             <a href="#">訂購</a>
 
             <div class="tea">
@@ -117,9 +135,9 @@
          </div>
 
          <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25185.591372306313!2d139.7352191824433!3d35.
-            69058747485717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca47ec7d85b%3A0xbedafea67abc370f!2z5aSP5
-            aiB5aS35pep6aSQIEVnZyAnbiBUaGluZ3M!5e0!3m2!1szh-TW!2stw!4v1614267216468!5m2!1szh-TW!2stw" 
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.467687045394!2d121.54106421544722!3d25.0521328437
+            17267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abddfa4b02ab%3A0x7b0d48826d60cad0!2zMTA05Y-
+            w5YyX5biC5Lit5bGx5Y2A5Y2X5Lqs5p2x6Lev5LiJ5q61MjE56JmfNeaokw!5e0!3m2!1szh-TW!2stw!4v1616563225373!5m2!1szh-TW!2stw" 
             width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
 
@@ -140,6 +158,51 @@
          </footer>
 
 	 </div>
+
+     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+      },
+      loop: true,
+      speed:1500,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+    });
+
+  
+  </script>
+
+<script>
+    var swiper = new Swiper('.swiper-container2', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+      loop: true,
+      speed:1500,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: '.swiper-pagination2',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+    });
+
+  </script>
 </body>
 </html>
 

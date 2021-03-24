@@ -143,7 +143,7 @@ mark img{
 
 mark a{
    text-decoration: none;
-   font-size: 1.2em;
+   font-size: 2.5vh;
    color: #000;
    font-weight: bold;
 }
@@ -188,7 +188,7 @@ mark p{
 
 .block1 h1{
   padding: 20px 0 20px 30px;
-  font-size: 2em;
+  font-size: 3.5vh;
   color: orange;
   text-align: center;
 }
@@ -264,6 +264,7 @@ mark p{
   max-width: 75%;
   min-width: 75%;
   flex:0 0 75%;
+  font-size: 2vh;
  }
 
  .block2 img{
@@ -1306,6 +1307,7 @@ input:checked ~ .as5 {
 .store p{
 	color: #999;
   text-align: center;
+  font-size: 1.2em;
 }
 
 @media screen and (max-width: 800px){
